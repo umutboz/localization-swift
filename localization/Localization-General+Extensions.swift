@@ -70,12 +70,6 @@ extension Localization {
 			static var certificatePinningError: String { get {  NSLocalizedString("General.Errors.certificatePinningError", comment: "") }}
 			static var localizationChangeApiFetchFail: String { get {  NSLocalizedString("General.Errors.localizationChangeApiFetchFail", comment: "") }}
 
-		struct ComponentErrors{
-				static var needsCountryForCity: String { get {  NSLocalizedString("General.Errors.ComponentErrors.needsCountryForCity", comment: "") }}
-				static var needsCityForCounty: String { get {  NSLocalizedString("General.Errors.ComponentErrors.needsCityForCounty", comment: "") }}
-
-		    }
-
 		struct InputErrors{
 				static var empty: String { get {  NSLocalizedString("General.Errors.InputErrors.empty", comment: "") }}
 				static var emptyShort: String { get {  NSLocalizedString("General.Errors.InputErrors.emptyShort", comment: "") }}
@@ -87,6 +81,12 @@ extension Localization {
 				static var emailFormatFail: String { get {  NSLocalizedString("General.Errors.InputErrors.emailFormatFail", comment: "") }}
 				static var creditCardNoFail: String { get {  NSLocalizedString("General.Errors.InputErrors.creditCardNoFail", comment: "") }}
 				static var phoneNoFail: String { get {  NSLocalizedString("General.Errors.InputErrors.phoneNoFail", comment: "") }}
+
+		    }
+
+		struct ComponentErrors{
+				static var needsCountryForCity: String { get {  NSLocalizedString("General.Errors.ComponentErrors.needsCountryForCity", comment: "") }}
+				static var needsCityForCounty: String { get {  NSLocalizedString("General.Errors.ComponentErrors.needsCityForCounty", comment: "") }}
 
 		    }
 

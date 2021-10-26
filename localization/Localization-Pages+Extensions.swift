@@ -140,6 +140,11 @@ extension Localization {
 						static var InsuranceTopInfo: String { get {  NSLocalizedString("", comment: "") }}
 						static var MeetingPackageInfo: String { get {  NSLocalizedString("", comment: "") }}
 
+					struct Summary{
+							static var title: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.Summary.title", comment: "") }}
+
+					    }
+
 					struct MeetingPackageInfo{
 							static var title: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.MeetingPackageInfo.title", comment: "") }}
 							static var infoTop: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.MeetingPackageInfo.infoTop", comment: "") }}
@@ -179,11 +184,6 @@ extension Localization {
 							static var onamFormSwitchText: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.Agreement.onamFormSwitchText", comment: "") }}
 							static var distanceSaleAgreementForm: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.Agreement.distanceSaleAgreementForm", comment: "") }}
 							static var distanceSaleAgreementFormSwitchText: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.Agreement.distanceSaleAgreementFormSwitchText", comment: "") }}
-
-					    }
-
-					struct Summary{
-							static var title: String { get {  NSLocalizedString("Pages.Appointment.UI.SubPages.Purchase.Summary.title", comment: "") }}
 
 					    }
 
@@ -517,17 +517,6 @@ extension Localization {
 					static var appointmentStarted: String { get {  NSLocalizedString("Pages.Main.Home.UI.appointmentStarted", comment: "") }}
 					static var backToProfile: String { get {  NSLocalizedString("Pages.Main.Home.UI.backToProfile", comment: "") }}
 
-				struct AppointmentButtons{
-						static var createAppointment: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.createAppointment", comment: "") }}
-						static var plannedAppointments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.plannedAppointments", comment: "") }}
-						static var passedAppointments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.passedAppointments", comment: "") }}
-						static var waitingPayments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.waitingPayments", comment: "") }}
-						static var waitingPaymentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.waitingPaymentsEmpty", comment: "") }}
-						static var plannedAppointmentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.plannedAppointmentsEmpty", comment: "") }}
-						static var passedAppointmentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.passedAppointmentsEmpty", comment: "") }}
-
-				    }
-
 				struct UserInfoDetails{
 					struct PersonalInfo{
 							static var protocolNo: String { get {  NSLocalizedString("Pages.Main.Home.UI.UserInfoDetails.PersonalInfo.protocolNo", comment: "") }}
@@ -593,6 +582,24 @@ extension Localization {
 
 				    }
 
+				struct PhotoAdd{
+						static var addPhoto: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addPhoto", comment: "") }}
+						static var addFromGallery: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addFromGallery", comment: "") }}
+						static var addFromCamera: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addFromCamera", comment: "") }}
+
+				    }
+
+				struct AppointmentButtons{
+						static var createAppointment: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.createAppointment", comment: "") }}
+						static var plannedAppointments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.plannedAppointments", comment: "") }}
+						static var passedAppointments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.passedAppointments", comment: "") }}
+						static var waitingPayments: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.waitingPayments", comment: "") }}
+						static var waitingPaymentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.waitingPaymentsEmpty", comment: "") }}
+						static var plannedAppointmentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.plannedAppointmentsEmpty", comment: "") }}
+						static var passedAppointmentsEmpty: String { get {  NSLocalizedString("Pages.Main.Home.UI.AppointmentButtons.passedAppointmentsEmpty", comment: "") }}
+
+				    }
+
 				struct BottomUserInfos{
 						static var personalInfo: String { get {  NSLocalizedString("Pages.Main.Home.UI.BottomUserInfos.personalInfo", comment: "") }}
 						static var identityInfo: String { get {  NSLocalizedString("Pages.Main.Home.UI.BottomUserInfos.identityInfo", comment: "") }}
@@ -601,13 +608,6 @@ extension Localization {
 						static var takenFromFormInfo: String { get {  NSLocalizedString("Pages.Main.Home.UI.BottomUserInfos.takenFromFormInfo", comment: "") }}
 						static var children: String { get {  NSLocalizedString("Pages.Main.Home.UI.BottomUserInfos.children", comment: "") }}
 						static var files: String { get {  NSLocalizedString("Pages.Main.Home.UI.BottomUserInfos.files", comment: "") }}
-
-				    }
-
-				struct PhotoAdd{
-						static var addPhoto: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addPhoto", comment: "") }}
-						static var addFromGallery: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addFromGallery", comment: "") }}
-						static var addFromCamera: String { get {  NSLocalizedString("Pages.Main.Home.UI.PhotoAdd.addFromCamera", comment: "") }}
 
 				    }
 

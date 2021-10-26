@@ -54,6 +54,12 @@ class TemplateModule(Base):
     def getModuleOutputPath(self):
         module_directory_path = self.outputRootPath + CODING.SLASH + "modules" +  CODING.SLASH  + self.name + CODING.SLASH  + self.outputDirectory
         return module_directory_path
+
+    def getGeneratingOutputPath(self):
+        module_directory_path = os.getcwd()
+        if self.outputDirectory != '':
+            module_directory_path += CODING.SLASH + self.outputDirectory
+        return module_directory_path
         
     def initializeTemplateFolder(self):
         for t_folder in self.templateFolders:

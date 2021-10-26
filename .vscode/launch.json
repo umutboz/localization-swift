@@ -5,13 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File output",
+            "type": "python",
+            "request": "launch",
+            "program": "/Users/starforce/Desktop/Architecture/code gen core/localization-swift v1/localization-swift/localization-swift.py",
+            "console": "integratedTerminal",
+            "args": ["-p", "modules/localization-swift/Localizable.strings", "-o", "localization"]
+
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "/Users/starforce/Desktop/Architecture/CodeGenerationCore/localization-swift.py",
+            "program": "/Users/starforce/Desktop/Architecture/code gen core/localization-swift v1/localization-swift/localization-swift.py",
             "console": "integratedTerminal",
             "args": ["-p", "modules/localization-swift/Localizable.strings"]
 
         }
+        
     ],
 }

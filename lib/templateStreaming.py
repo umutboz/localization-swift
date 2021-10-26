@@ -19,16 +19,16 @@ import re
 
 # Own modules
 
-from lib.abstract import Base
-from lib.enums import MessageType
-from lib.enums import CODING
-from lib.enums import MUSTACHE
-from lib.fileOperation import FileOperation
-from lib.templateFile import TemplateFile
-from lib.templateModule import TemplateModule
-from lib.httpOperation import HttpOperation
-from lib.parser import Parser
-from lib.enums import MESSAGE_TYPE
+from abstract import Base
+
+from enums import CODING
+from enums import MUSTACHE
+from fileOperation import FileOperation
+from templateFile import TemplateFile
+from templateModule import TemplateModule
+from httpOperation import HttpOperation
+from parser import Parser
+from enums import MESSAGE_TYPE
 
 
 class TemplateStreaming(Base):
@@ -56,7 +56,8 @@ class TemplateStreaming(Base):
                     self.templateModule.getOutputDirectoryPath()) and self.templateModule.isAppendOutputPath:
                 # TODO : delete folder
                 self.fileOp.removeRecursively(folder_path=self.templateModule.getOutputDirectoryPath())
-                module_directory_path = self.templateModule.getModuleOutputPath()
+                #module_directory_path = self.templateModule.getModuleOutputPath()
+                module_directory_path = self.templateModule.getGeneratingOutpuPath()
                 #directory_path = self.fileOp.createNewPath(self.templateModule.outputRootPath,
                 #                                           self.templateModule.outputDirectory)
                 self.fileOp.createFolderWithoutPath(module_directory_path)
@@ -70,7 +71,8 @@ class TemplateStreaming(Base):
                                  "to True. But all files will be deleted",
                          message_type=MESSAGE_TYPE.INFO)
             else:
-                module_directory_path = self.templateModule.getModuleOutputPath()
+                #module_directory_path = self.templateModule.getModuleOutputPath()
+                module_directory_path = self.templateModule.getGeneratingOutputPath()
                 #directory_path = self.fileOp.createNewPath(self.templateModule.outputRootPath + CODING.SLASH + self.getModulePath(),
                 #                                           self.templateModule.outputDirectory)
                 self.fileOp.createFolderWithoutPath(module_directory_path)
@@ -92,7 +94,8 @@ class TemplateStreaming(Base):
                     print(child_loop_all_content)
                 # generate output file
                 if str(t_file.outputFile).strip():
-                    module_directory_path = self.templateModule.getModuleOutputPath()
+                    #module_directory_path = self.templateModule.getModuleOutputPath()
+                    module_directory_path = self.templateModule.getGeneratingOutputPath()
                     if self.enableLog:
                         print("output: " + module_directory_path)
                     self.fileOp.create(file_path = module_directory_path + CODING.SLASH + t_file.outputFile, content=child_loop_all_content)
@@ -133,7 +136,8 @@ class TemplateStreaming(Base):
                     print(replaced_template_content)
                 # generate output file
                 if str(t_file.outputFile).strip():
-                    module_directory_path = self.templateModule.getModuleOutputPath()
+                    #module_directory_path = self.templateModule.getModuleOutputPath()
+                    module_directory_path = self.templateModule.getGeneratingOutputPath()
                     if self.enableLog:
                         print("output: " + module_directory_path)
                     self.fileOp.create(file_path = module_directory_path + CODING.SLASH + t_file.outputFile, content=replaced_template_content)

@@ -66,7 +66,6 @@ def recursive_field_content(parent):
     # alllast keys
     content = ""
     index = 0
-    # sample dictionary = {"field_name":"title", "localization_string_key": "Pages.UI.title"}
     for child in parent.childs:
         index = child.index
         field_tf = TemplateFile(
@@ -353,7 +352,7 @@ def collect_execute_data(parent_obj,temp_obj = None):
 
 
 # code generation execution
-def execute(localizations):
+def execute(localizations,output_path = ""):
     if len(localizations) == 0:
         Log.e("String file parsing issue, Strings must conform to file schema, please check!")
     else:
@@ -392,9 +391,9 @@ def execute(localizations):
             collect_execute_data(parent_obj=loc)
             loc.templateFile.content = loc.generatedStructContent
             localizationModule.templateFiles.append(loc.templateFile)
-            Log.w(loc.templateFile.outputFile)
+            Log.w(output_path + CODING.SLASH + loc.templateFile.outputFile)
                 
-        localizationModule.outputDirectory = "localization"
+        localizationModule.outputDirectory = output_path
         localizationModule.isAppendOutputPath = True
         
         tStreaming.templateModule = localizationModule
@@ -500,6 +499,7 @@ if len(sys.argv) >= 3:
     params = str(sys.argv[1])
     localizable_string_file_path_param = str(sys.argv[2])
     localizable_string_file_path = ""
+    outPutPath = ""
 
     if params == "-p":
         path_name = os.getcwd()
@@ -515,6 +515,9 @@ if len(sys.argv) >= 3:
             is_okay_string_file = True
     
     if is_okay_string_file:
+        if len(sys.argv) >= 5 and str(sys.argv[3]) == "-o":
+            outPutPath = str(sys.argv[4])
+
         op = FileOperation()
         localizable_string_file_content = op.readContent(localizable_string_file_path)
         #print(localizable_string_file_content)
@@ -573,7 +576,7 @@ if len(sys.argv) >= 3:
                             recursive_add_child(obj,parent_key=parent_key, current_key=child_obj, column_index=column_index, array_len=len(arr[:][i]),full_split=arr[:][i])
 
         
-        execute(localizable_list)
+        execute(localizable_list,output_path = outPutPath)
 
         #print(max_len_count)
          
@@ -587,6 +590,8 @@ else:
             Log.w("-p /string-file-path")
             Log.i("you can string file with full path -fp")
             Log.w("-fp /Users/***/Desktop/..")
+            Log.i("you can generate output sub pat with -o")
+            Log.w("-o localization")
 
         else:
             Log.e("must be use min. 2 parameters ")
