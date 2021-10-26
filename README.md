@@ -96,3 +96,23 @@ tStreaming.execute()
 
 Can be Contribution, join us!
 ![alt text](https://github.com/umutboz/code-gen-lib/blob/master/contribution_model.png?raw=true)
+
+
+## HomeBrew localization-swift installation
+The missing package manager for macOS.  Homebrew won’t install files outside its prefix, and you can place a Homebrew installation wherever you like.
+
+After installed Homebrew, execute following commands
+```python
+$ brew install localization-swift --HEAD
+```
+For localization-swift installation, run the following command:
+
+1.
+```python
+$ brew search umutboz/localization-swift/localization-swift
+```
+
+2.
+```python
+$ brew install localization-swift
+```
